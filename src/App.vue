@@ -1,20 +1,32 @@
 <template>
-  <div id="app">
+  <div id="app" class="app app--dark">
     <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/blog">Blog</router-link>
+      <!-- <router-link to="/">Home</router-link>
+      <router-link to="/blog">Articles</router-link> -->
     </div>
     <router-view/>
   </div>
 </template>
 
 <style>
-#app {
+html, body {
+ margin: 0px;
+ height: 100%;
+ width: 100%;
+}
+
+.app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  height: 100%;
+}
+
+.app--dark {
+  background-color: #000;
+  color: #fff;
 }
 
 #nav {
@@ -23,10 +35,12 @@
 
 #nav a {
   font-weight: bold;
-  color: #2c3e50;
+  color: #fff;
+  text-decoration: none;
+  margin: 8px 16px;
 }
 
 #nav a.router-link-exact-active {
-  color: #42b983;
+  color: #8facd8;
 }
 </style>
