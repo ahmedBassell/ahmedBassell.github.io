@@ -11,13 +11,16 @@
 
       Hi 👋, <br>
       I'm Ahmed Bassell
+      <div class="separator"></div>
       <div class="desc">
-        A software engineer with interests in working with scalable products, distributed systems architecture, microservices.<br>
-        Also I love TDD, front-end technologies and writing about things i learn.<br>
+        A software engineer with interests in scalable products, distributed systems architecture, microservices.<div class="separator"></div>
+        Also I love TDD, front-end technologies and writing about things i learn.<div class="separator"></div>
         A Marathon finisher 🏅 & sports enthusiast 💪
       </div>
 
-      <div class="resume"></div>
+      <a class="resume" v-bind:href="cv_url" target="_blank">
+        Download CV
+      </a>
     </div>
 
     <div class="social">
@@ -35,7 +38,9 @@
 export default {
   name: 'Home',
   data: () => {
+    console.log(process.env.BASE_URL)
     return {
+      cv_url: '/cv.pdf'
     }
   }
 }
@@ -45,6 +50,7 @@ export default {
 <style scoped>
 .home {
   flex-flow: row wrap;
+  padding: 16px;
 }
 .avatar {
   display: flex;
@@ -63,7 +69,7 @@ export default {
   font-size: 32px;
   padding: 32px;
   border-radius: 8px;
-  text-align: left;
+  text-align: center;
 }
 
  /* blinking cursor */
@@ -76,8 +82,8 @@ export default {
   line-height: 24px;
   margin-left: 4px;
   animation: blink 0.8s infinite;
-  width: 12px;
-  height: 24px;
+  width: 16px;
+  height: 32px;
 }
 
 .desc {
@@ -85,10 +91,35 @@ export default {
   font-size: 16px;
 }
 
+.separator {
+  height: 8px;
+}
+
 @keyframes blink {
   0% {background: #000}
   50% {background: #fff}
   100% {background: #000}
+}
+
+a, a:active, a:visited {
+  text-decoration: none;
+}
+
+.resume {
+  display: flex;
+  width: 196px;
+  text-decoration: none;
+  color: #fff;
+  background-color: #000;
+  margin: 24px auto 0 auto;
+  padding: 8px;
+  cursor: pointer;
+  opacity: 0.7;
+  border-radius: 4px;
+}
+
+.resume:hover {
+  opacity: 1;
 }
 
 .social {
@@ -124,6 +155,27 @@ export default {
 .facebook:hover,
 .email:hover {
   opacity: 1;
+}
+
+@media only screen and (max-width: 600px) {
+  .avatar {
+    width: 216px;
+    height: 216px;
+  }
+
+  .separator {
+    height: 16px;
+  }
+
+  .github,
+  .linkedin,
+  .twitter,
+  .instagram,
+  .facebook,
+  .email {
+    width: 32px;
+    height: 32px;
+  }
 }
 
 </style>
