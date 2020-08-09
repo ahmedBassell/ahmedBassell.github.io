@@ -1,9 +1,9 @@
 <template>
   <div id="app" class="app app--dark">
-    <div id="nav">
-      <!-- <router-link to="/">Home</router-link>
-      <router-link to="/blog">Articles</router-link> -->
-    </div>
+    <!-- <div id="nav">
+      <router-link to="/">Home</router-link>
+      <router-link to="/blog">Articles</router-link>
+    </div> -->
     <router-view/>
   </div>
 </template>
@@ -21,6 +21,9 @@ html, body {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  height: 100vh;
+  overflow-y: auto;
+  display: flex;
 }
 
 .app--dark {
@@ -29,7 +32,7 @@ html, body {
 }
 
 #nav {
-  padding: 30px;
+  padding: 16px;
 }
 
 #nav a {

@@ -5,7 +5,7 @@
 
     <div class="bio">
       <div class="blinking-cursor">
-        <span>&#x3E;</span>
+        <span style="line-height: 1;">&#x3E;</span>
         <div class="cursor"></div>
       </div>
 
@@ -49,21 +49,26 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .home {
-  flex-flow: row wrap;
   padding: 16px;
+  margin: 32px auto;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  overflow-y: auto;
+  max-height: 848px;
 }
 .avatar {
-  display: flex;
   margin: 0 auto;
   width: 240px;
   height: 240px;
   border-radius: 50%;
   background-size: cover;
+  flex-shrink: 0;
 }
 
 .bio {
   max-width: 760px;
-  margin: 40px auto;
+  margin: 36px auto;
   background-color: #fff;
   color: #000;
   font-size: 32px;
@@ -82,7 +87,7 @@ export default {
   line-height: 24px;
   margin-left: 4px;
   animation: blink 0.8s infinite;
-  width: 16px;
+  width: 18px;
   height: 32px;
 }
 
@@ -124,7 +129,7 @@ a, a:active, a:visited {
 
 .social {
   max-width: 760px;
-  margin: 40px auto;
+  margin: 36px 0;
   background-color: #fff;
   color: #000;
   font-size: 32px;
@@ -132,6 +137,7 @@ a, a:active, a:visited {
   padding: 32px;
   justify-content: center;
   border-radius: 8px;
+  flex-flow: row wrap;
 }
 
 .github,
@@ -158,13 +164,26 @@ a, a:active, a:visited {
 }
 
 @media only screen and (max-width: 600px) {
+  .home {
+    margin: 8px auto;
+  }
+
   .avatar {
-    width: 216px;
-    height: 216px;
+    width: 160px;
+    height: 160px;
+  }
+
+  .bio {
+    margin: 8px auto;
+    padding: 16px;
   }
 
   .separator {
     height: 16px;
+  }
+
+  .social {
+    margin: 8px 0;
   }
 
   .github,
@@ -173,8 +192,8 @@ a, a:active, a:visited {
   .instagram,
   .facebook,
   .email {
-    width: 32px;
-    height: 32px;
+    width: 30px;
+    height: 30px;
   }
 }
 
