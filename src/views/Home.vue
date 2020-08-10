@@ -13,9 +13,9 @@
       I'm Ahmed Bassell
       <div class="separator"></div>
       <div class="desc">
-        A software engineer with interests in scalable products, distributed systems architecture, microservices.<div class="separator"></div>
-        Also I love TDD, front-end technologies and writing about things i learn.<div class="separator"></div>
-        A Marathon finisher 🏅 & sports enthusiast 💪
+        <span> {{ desc_1 }} </span><div class="separator"></div>
+        <span> {{ desc_2 }} </span><div class="separator"></div>
+        <span> {{ desc_3 }} </span>
       </div>
 
       <a class="resume" v-bind:href="cv_url" target="_blank">
@@ -37,11 +37,25 @@
 <script>
 export default {
   name: 'Home',
-  data: () => {
+  data() {
     console.log(process.env.BASE_URL)
     return {
-      cv_url: '/cv.pdf'
+      cv_url: '/cv.pdf',
+      desc_1: 'A software engineer with interests in scalable products, distributed systems, microservices architecture.',
+      desc_2: 'I love git, Vue, Ruby, Go, Docker, TDD, Learning API paradigms and writing articles about things i learn.',
+      desc_3: 'A Marathon finisher 🏅, sports enthusiast 💪, Ping Pong 💪 is my favourite but i like playing Tennis too.',
+      desc_shown_1: '',
     }
+  },
+  created() {
+    // let interval = setInterval(() => {
+    //   if(this.desc_1.length === 0) {
+    //     clearInterval(interval);
+    //     return;
+    //   }
+    //   this.desc_shown_1 += (this.desc_1[0]);
+    //   this.desc_1 = this.desc_1.substr(1);
+    // }, 120);
   }
 }
 </script>
@@ -57,6 +71,7 @@ export default {
   overflow-y: auto;
   max-height: 848px;
 }
+
 .avatar {
   margin: 0 auto;
   width: 240px;

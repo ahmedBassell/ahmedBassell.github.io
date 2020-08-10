@@ -9,7 +9,20 @@ Vue.use(VueRouter)
   {
     path: '/',
     name: 'Home',
-    component: Home
+    component: Home,
+    meta: {
+      title: 'Ahmed Bassell - Personal Website',
+      metaTags: [
+        {
+          name: 'description',
+          content: 'About Ahmed Bassell career & interests'
+        },
+        {
+          property: 'og:description',
+          content: 'About Ahmed Bassell career & interests'
+        }
+      ]
+    }
   },
   {
     path: '/blog',
