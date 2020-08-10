@@ -90,6 +90,7 @@ export default {
   padding: 32px;
   border-radius: 8px;
   text-align: center;
+  filter: grayscale(100%);
 }
 
  /* blinking cursor */
