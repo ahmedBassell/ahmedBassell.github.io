@@ -43,7 +43,7 @@ export default {
       cv_url: '/cv.pdf',
       desc_1: 'A software engineer with interests in scalable products, distributed systems, microservices architecture.',
       desc_2: 'I love git, Vue, Ruby, Go, Docker, TDD, Learning API paradigms and writing articles about things i learn.',
-      desc_3: 'A Marathon finisher 🏅, sports enthusiast 💪, Ping Pong 💪 is my favourite but i like playing Tennis too.',
+      desc_3: 'A Marathon finisher 🏅, sports enthusiast 💪, Ping Pong 🏓 is my favourite but i like playing Tennis too.',
       desc_shown_1: '',
     }
   },
