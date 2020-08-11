@@ -1,35 +1,37 @@
 <template>
   <div class="home">
-    <div class="avatar" :style="{ backgroundImage: 'url(' + require('@/assets/ab-bw-min.jpeg') + ')'}">
-    </div>
-
-    <div class="bio">
-      <div class="blinking-cursor">
-        <span style="line-height: 1;">&#x3E;</span>
-        <div class="cursor"></div>
+    <div class="wrapper">
+      <div class="avatar" :style="{ backgroundImage: 'url(' + require('@/assets/ab-bw-min.jpeg') + ')'}">
       </div>
 
-      Hi 👋, <br>
-      I'm Ahmed Bassell
-      <div class="separator"></div>
-      <div class="desc">
-        <span> {{ desc_1 }} </span><div class="separator"></div>
-        <span> {{ desc_2 }} </span><div class="separator"></div>
-        <span> {{ desc_3 }} </span>
+      <div class="bio">
+        <div class="blinking-cursor">
+          <span style="line-height: 1;">&#x3E;</span>
+          <div class="cursor"></div>
+        </div>
+
+        Hi 👋, <br>
+        I'm Ahmed Bassell
+        <div class="separator"></div>
+        <div class="desc">
+          <span> {{ desc_1 }} </span><div class="separator"></div>
+          <span> {{ desc_2 }} </span><div class="separator"></div>
+          <span> {{ desc_3 }} </span>
+        </div>
+
+        <a class="resume" v-bind:href="cv_url" target="_blank">
+          Download CV
+        </a>
       </div>
 
-      <a class="resume" v-bind:href="cv_url" target="_blank">
-        Download CV
-      </a>
-    </div>
-
-    <div class="social">
-      <a class="github" :style="{ backgroundImage: 'url(' + require('@/assets/social/github.png') + ')'}" href="https://github.com/ahmedBassell" target="_blank"></a>
-      <a class="linkedin" :style="{ backgroundImage: 'url(' + require('@/assets/social/linkedin.png') + ')'}" href="https://www.linkedin.com/in/bassell" target="_blank"></a>
-      <a class="instagram" :style="{ backgroundImage: 'url(' + require('@/assets/social/instagram.png') + ')'}" href="https://www.instagram.com/ahmedbassell" target="_blank"></a>
-      <a class="twitter" :style="{ backgroundImage: 'url(' + require('@/assets/social/twitter.png') + ')'}" href="https://twitter.com/AhmedBassell" target="_blank"></a>
-      <a class="facebook" :style="{ backgroundImage: 'url(' + require('@/assets/social/facebook.png') + ')'}" href="https://www.facebook.com/ahmed.bassell" target="_blank"></a>
-      <a class="email" :style="{ backgroundImage: 'url(' + require('@/assets/social/email.png') + ')'}" href="mailto:ahmedbassell@gmail.com" target="_blank"></a>
+      <div class="social">
+        <a class="github" :style="{ backgroundImage: 'url(' + require('@/assets/social/github.png') + ')'}" href="https://github.com/ahmedBassell" target="_blank"></a>
+        <a class="linkedin" :style="{ backgroundImage: 'url(' + require('@/assets/social/linkedin.png') + ')'}" href="https://www.linkedin.com/in/bassell" target="_blank"></a>
+        <a class="instagram" :style="{ backgroundImage: 'url(' + require('@/assets/social/instagram.png') + ')'}" href="https://www.instagram.com/ahmedbassell" target="_blank"></a>
+        <a class="twitter" :style="{ backgroundImage: 'url(' + require('@/assets/social/twitter.png') + ')'}" href="https://twitter.com/AhmedBassell" target="_blank"></a>
+        <a class="facebook" :style="{ backgroundImage: 'url(' + require('@/assets/social/facebook.png') + ')'}" href="https://www.facebook.com/ahmed.bassell" target="_blank"></a>
+        <a class="email" :style="{ backgroundImage: 'url(' + require('@/assets/social/email.png') + ')'}" href="mailto:ahmedbassell@gmail.com" target="_blank"></a>
+      </div>
     </div>
   </div>
 </template>
@@ -63,13 +65,16 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .home {
-  padding: 16px;
-  margin: 32px auto;
+  overflow-y: auto;
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-between;
-  overflow-y: auto;
-  max-height: 848px;
+  width: 100%;
+}
+
+.wrapper {
+  padding: 16px;
+  margin: 32px auto;
 }
 
 .avatar {
