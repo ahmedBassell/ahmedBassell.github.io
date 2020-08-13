@@ -1,5 +1,5 @@
 <template>
   <div class="blog">
-    Blog Page!
+    No Recent Articles.
   </div>
 </template>

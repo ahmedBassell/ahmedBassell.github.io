@@ -1,9 +1,10 @@
 <template>
   <div id="app" class="app app--dark">
-    <!-- <div id="nav">
-      <router-link to="/">Home</router-link>
+    <div id="nav">
+      <router-link to="/">About</router-link>
       <router-link to="/blog">Articles</router-link>
-    </div> -->
+      <!-- <router-link to="/projects">Projects</router-link> -->
+    </div>
     <router-view/>
   </div>
 </template>
@@ -24,6 +25,7 @@ html, body {
   height: 100vh;
   overflow-y: auto;
   display: flex;
+  flex-flow: column nowrap;
 }
 
 .app--dark {
@@ -39,12 +41,12 @@ html, body {
 
 #nav a {
   font-weight: bold;
-  color: #fff;
+  color: #bdbbbb;
   text-decoration: none;
   margin: 8px 16px;
 }
 
 #nav a.router-link-exact-active {
-  color: #8facd8;
+  color: #fff;
 }
 </style>

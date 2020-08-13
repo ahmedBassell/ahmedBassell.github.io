@@ -40,7 +40,6 @@
 export default {
   name: 'Home',
   data() {
-    console.log(process.env.BASE_URL)
     return {
       cv_url: '/cv.pdf',
       desc_1: 'A software engineer with interests in scalable products, distributed systems, microservices architecture.',
