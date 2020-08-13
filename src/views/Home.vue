@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <div class="wrapper">
-      <div class="avatar" :style="{ backgroundImage: 'url(' + require('@/assets/ab-bw-min.jpeg') + ')'}">
+      <div class="avatar" :style="{ backgroundImage: 'url(ab-bw-min.jpeg)'}">
       </div>
 
       <div class="bio">

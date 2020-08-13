@@ -11,15 +11,15 @@ Vue.use(VueRouter)
     name: 'Home',
     component: Home,
     meta: {
-      title: 'Ahmed Bassell - Personal Website',
+      title: 'Ahmed Bassell - About',
       metaTags: [
         {
           name: 'description',
-          content: 'About Ahmed Bassell career & interests'
+          content: 'Ahmed Bassell\'s  interests'
         },
         {
           property: 'og:description',
-          content: 'About Ahmed Bassell career & interests'
+          content: 'Ahmed Bassell\'s  interests'
         }
       ]
     }
@@ -27,12 +27,25 @@ Vue.use(VueRouter)
   {
     path: '/blog',
     name: 'Blog',
-    component: Blog
+    component: Blog,
+    meta: {
+      title: 'Ahmed Bassell - Blog',
+      metaTags: [
+        {
+          name: 'description',
+          content: 'Ahmed Bassell\'s articles'
+        },
+        {
+          property: 'og:description',
+          content: 'Ahmed Bassell\'s articles'
+        }
+      ]
+    }
   }
 ]
 
 const router = new VueRouter({
-  mode: 'history',
+  // mode: 'history',
   base: process.env.BASE_URL,
   routes
 })
