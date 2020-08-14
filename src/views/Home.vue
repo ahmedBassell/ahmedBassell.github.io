@@ -64,7 +64,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .home {
-  overflow-y: auto;
+  /* overflow-y: auto; */
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-between;
@@ -72,8 +72,8 @@ export default {
 }
 
 .wrapper {
-  padding: 16px;
-  margin: 32px auto;
+  /* padding: 16px; */
+  margin: 24px auto;
 }
 
 .avatar {
@@ -87,14 +87,18 @@ export default {
 
 .bio {
   max-width: 760px;
-  margin: 36px auto;
+  margin: 16px auto;
   background-color: #fff;
   color: #000;
   font-size: 32px;
-  padding: 32px;
+  padding: 24px;
   border-radius: 8px;
   text-align: center;
   filter: grayscale(100%);
+}
+
+.bio:hover {
+  filter: grayscale(50%);
 }
 
  /* blinking cursor */
@@ -149,12 +153,12 @@ a, a:active, a:visited {
 
 .social {
   max-width: 760px;
-  margin: 36px 0;
+  margin: 16px 0 0 0;
   background-color: #fff;
   color: #000;
   font-size: 32px;
   display: flex;
-  padding: 32px;
+  padding: 24px;
   justify-content: center;
   border-radius: 8px;
   flex-flow: row wrap;
@@ -166,8 +170,8 @@ a, a:active, a:visited {
 .instagram,
 .facebook,
 .email {
-  width: 48px;
-  height: 48px;
+  width: 32px;
+  height: 32px;
   background-size: cover;
   cursor: pointer;
   margin: 8px;
@@ -184,6 +188,10 @@ a, a:active, a:visited {
 }
 
 @media only screen and (max-width: 600px) {
+  .wrapper {
+    padding: 8px;
+  }
+
   .home {
     margin: 8px auto;
   }
@@ -212,8 +220,8 @@ a, a:active, a:visited {
   .instagram,
   .facebook,
   .email {
-    width: 30px;
-    height: 30px;
+    width: 24px;
+    height: 24px;
   }
 }
 

@@ -6,6 +6,10 @@
       <!-- <router-link to="/projects">Projects</router-link> -->
     </div>
     <router-view/>
+
+    <div class="footer">
+      Copyright © Ahmed Bassell 2020-Present
+    </div>
   </div>
 </template>
 
@@ -48,5 +52,9 @@ html, body {
 
 #nav a.router-link-exact-active {
   color: #fff;
+}
+
+.footer {
+  font-size: 12px;
 }
 </style>
